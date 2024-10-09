@@ -175,7 +175,7 @@ fun AppHeader() {
     ) {
         Text(
             modifier = Modifier.padding(16.dp),
-            text = "ZaibChat",
+            text = "GEMINI CHATBOT",
             fontWeight = FontWeight.ExtraBold,
             color = Color.White,
             fontSize = 22.sp
