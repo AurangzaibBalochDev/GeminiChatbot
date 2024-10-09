@@ -32,28 +32,15 @@ class ChatViewModel : ViewModel() {
                     }.toList()
                 )
 
-                if (myQuestion == "who is your creator ".trim() || myQuestion == "who created you ".trim()) {
-                    messageList.add(MessageModel(myQuestion, "user"))
-                    messageList.add(MessageModel("Typing....", "model"))
-
-                    val response = chat.sendMessage(myQuestion)
-                    messageList.removeLast()
-                    messageList.add(
-                        MessageModel(
-                            " Aurangzaib Baloch created me using kotlin technology",
-                            "model"
-                        )
-                    )
-
-                } else {
-                    messageList.add(MessageModel(myQuestion, "user"))
+           
+                   messageList.add(MessageModel(myQuestion, "user"))
                     messageList.add(MessageModel("Typing....", "model"))
 
                     val response = chat.sendMessage(myQuestion)
                     messageList.removeLast()
                     messageList.add(MessageModel(response.text.toString(), "model"))
 
-                }
+                
 
 
             } catch (e: Exception) {
